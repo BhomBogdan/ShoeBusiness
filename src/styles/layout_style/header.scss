@@ -1,0 +1,46 @@
+.Nav-Content {
+  color: var(--FC1-Tittle);
+  font-size: var(--FS-M);
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+.Nav-Content > * {
+  margin: 0 20px;
+}
+.Logo-Header {
+  height: 60px;
+}
+.Nav-Content > * > a {
+  padding: 10px;
+  border-radius: var(--BR1);
+}
+
+.Nav-Content > * > a:hover {
+  background-color: var(--bg2);
+}
+//TEST
+
+header {
+  padding: 15px 0;
+  box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.1);
+}
+//HAMBURGER MENU
+.hamburgerMenu {
+  background: transparent;
+  display: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburgerLine {
+  width: 26px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--text-color);
+  margin: 3px;
+  display: block;
+}

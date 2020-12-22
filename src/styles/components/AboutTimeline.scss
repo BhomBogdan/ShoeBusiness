@@ -1,0 +1,37 @@
+.LandingWelcome-Container {
+  justify-content: center;
+}
+.LandingWelcome-Text {
+  flex: 1 1;
+  font-size: var(--Font-B);
+  font-weight: 600;
+}
+.LandingWelcome-Text > span {
+  color: var(--accent);
+}
+.LandingWelcome-TextCompany {
+  font-size: var(--Font-SM);
+  margin-top: 25px;
+  font-weight: 300;
+  color: var(--FC2-Text);
+}
+.ButtonArea {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.LandingWelcome-DivPhoto {
+  flex: 1.5 1;
+}
+.LandingWelcome-Photo {
+  box-shadow: var(--BGS1);
+  width: 100%;
+  border-radius: var(--border-radius-M);
+  height: 500px;
+}
+.LandingWelcome-Photo > img {
+  width: 100%;
+  border-radius: var(--border-radius-M);
+}
