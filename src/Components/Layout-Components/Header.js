@@ -1,26 +1,25 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import { Link } from "gatsby"
 import logo from "../../../static/images/Assets/Logo-Blue.png"
 const Header = () => {
-  console.log(windowSize)
-
-  const [open, setOpen] = useState(true)
-  const [render, setrender] = useState(true)
+  const [open, setOpen] = useState(false)
+  const [render, setrender] = useState("none")
   const [heightmenu, setheightmenu] = useState(50)
 
-  console.log(open)
-  function height() {
-    if (windowSize < 400) {
-      setheightmenu(400)
-      setrender(!render)
-    } else {
-      setheightmenu(50)
-      setrender(!render)
-    }
+  const OnEventClick = element => {
+    console.log(element.target.parentElement.parentElement.firstElementChild)
   }
-
-  console.log(heightmenu)
+  useEffect(() => {
+    if (open) {
+      setheightmenu(400)
+      setrender("block")
+    } else {
+      setrender("none")
+      setheightmenu(50)
+    }
+  }, [open])
+  console.log(render)
   return (
     <header>
       <div className="center-section-header ">
@@ -31,32 +30,28 @@ const Header = () => {
               <img src={logo} alt="none" />
               {/*TEMPORAL !*/}
             </div>
-            {open && render && (
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-            )}
-            {open && render && (
-              <li>
-                <Link to="/Contact/">Contact</Link>
-              </li>
-            )}
-            {open && render && (
-              <li>
-                <Link to="/Services/">Services</Link>
-              </li>
-            )}
-            {open && render && (
-              <li>
-                <Link to="/AboutUs/">About Us</Link>
-              </li>
-            )}
+
+            <li style={{ display: render }}>
+              <Link to="/">Home</Link>
+            </li>
+
+            <li style={{ display: render }}>
+              <Link to="/Contact/">Contact</Link>
+            </li>
+
+            <li style={{ display: render }}>
+              <Link to="/Services/">Services</Link>
+            </li>
+
+            <li style={{ display: render }}>
+              <Link to="/AboutUs/">About Us</Link>
+            </li>
           </ul>
           <button
             className="hamburgerMenu"
-            onClick={() => {
+            onClick={element => {
               setOpen(!open)
-              height()
+              OnEventClick(element)
             }}
           >
             <div className="hamburgerLine"></div>
