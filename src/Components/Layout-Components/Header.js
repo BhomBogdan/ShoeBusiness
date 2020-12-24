@@ -3,8 +3,6 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import logo from "../../../static/images/Assets/Logo-Blue.png"
 const Header = () => {
-  const windowSize = window.innerWidth
-
   console.log(windowSize)
 
   const [open, setOpen] = useState(true)
