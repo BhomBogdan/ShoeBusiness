@@ -1,7 +1,12 @@
 .AboutReview-section {
   display: flex;
+
   flex-direction: column;
   margin: 0 100px;
+}
+.AboutReview-section > h1 {
+  text-align: center;
+  padding-bottom: 40px;
 }
 .AboutReview-imagetext {
   display: flex;
@@ -9,7 +14,9 @@
   border-radius: 15px 15px 15px 15px;
   box-shadow: var(--BGS1);
 }
-
+.CHANGE {
+  display: none;
+}
 .AboutReview-Buttons {
   margin: 40px 0px;
   display: flex;

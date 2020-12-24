@@ -1,12 +1,12 @@
 import React from "react"
-
+import { Link } from "gatsby"
 //DE ADAUGAT POZA CU GRAPHQL
 import landingFoto from "../../../static/images/test.jpg"
 
 const AboutTimeline = () => {
   return (
     <div className="center-section  ">
-      <div className="LandingWelcome-Container space-section flexdirection-row">
+      <div className="LandingWelcome-Container  flexdirection-row">
         <div className="LandingWelcome-Text">
           It's time <br />
           to get your <br />
@@ -16,13 +16,18 @@ const AboutTimeline = () => {
             <br /> And A Family Tradition Since 1904
           </div>
           <div className="ButtonArea">
-            <div className="button1">Our work</div>
-            <div className="button2">Or discover about us </div>
+            <Link to="/Contact/" className="button1">
+              Contact
+            </Link>
+            <Link to="/AboutUs/" className="button2">
+              Or discover about us
+            </Link>
           </div>
         </div>
 
         <div className="LandingWelcome-DivPhoto">
           <div className="LandingWelcome-Photo">
+            <div className="filterBlack"></div>
             <img src={landingFoto} alt="none" />
           </div>
         </div>

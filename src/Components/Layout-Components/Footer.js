@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import externalLinkIcon from "../../../static/images/Assets/external-link.png"
 import logo1 from "../../../static/images/Assets/Logo-Blue.png"
 
@@ -38,7 +39,10 @@ const Footer = () => {
         <div className="credits center-section-header-footer ">
           <p> © 2020 Gus and Co, All rights reserved </p>
           <div className="creditsText">
-            By BhomBogdan <img src={externalLinkIcon} />
+            By Bogdan Draghia
+            <Link to="https://bhombogdan.github.io/" target="_blank">
+              <img src={externalLinkIcon} />
+            </Link>
           </div>
         </div>
       </div>

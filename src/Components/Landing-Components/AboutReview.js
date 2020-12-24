@@ -17,6 +17,7 @@ const AboutReview = () => {
       data-sal-easing="ease"
     >
       <div className="AboutReview-section">
+        <h1>Our clients reviews</h1>
         <div className="AboutReview-imagetext">
           <div
             className="imagecompare"
@@ -63,7 +64,12 @@ const AboutReview = () => {
                 </p>
               </div>
 
-              <p></p>
+              <div className="CHANGE">
+                <div className="leftbutton">
+                  <button>LEFT</button>
+                  <button>Right</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
