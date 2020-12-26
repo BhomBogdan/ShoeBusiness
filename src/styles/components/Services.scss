@@ -1,15 +1,12 @@
-
-
 .ServicesGRID {
   display: flex;
   position: relative;
-
-  margin: 30px 160px;
 }
 .overtest {
   background-color: white;
   box-shadow: var(--BGS1);
   position: absolute;
+  z-index: 2;
   border-radius: 20px;
   width: 100%;
   height: 100%;
@@ -59,10 +56,24 @@
   height: 300px;
   background-color: white;
 }
+.AboutS {
+  z-index: 1;
+}
+.SubServicesGRID {
+  z-index: 0;
+}
 .iconCheck {
   width: 30px;
   height: 30px;
   margin: 0px 10px;
+}
+.Services-Item {
+  position: relative;
+}
+.overlaytransparent {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 .checkItem {
   align-self: flex-start;

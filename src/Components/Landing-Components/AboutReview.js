@@ -10,12 +10,7 @@ import compare1 from "../../../static/images/Assets/compare1.jpg"
 import quote from "../../../static/images/Assets/icons/quote.png"
 const AboutReview = () => {
   return (
-    <div
-      className="center-section paddingSpacebetwen "
-      data-sal="slide-up"
-      data-sal-delay="100"
-      data-sal-easing="ease"
-    >
+    <div className="center-section paddingSpacebetwen ">
       <div className="AboutReview-section">
         <h1>Our clients reviews</h1>
         <div className="AboutReview-imagetext">

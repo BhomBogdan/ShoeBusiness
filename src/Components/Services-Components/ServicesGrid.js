@@ -1,99 +1,55 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
 import testshoe from "../../../static/images/shoe.png"
 import testshoewoman from "../../../static/images/womanshoe.png"
 import bags from "../../../static/images/bags.png"
-import check from "../../../static/images/Assets/icons/check_bold.png"
+
+import ServiceItem from "./ServiceItem"
+import Serviceitemoverlay from "./Serviceitemoverlay"
+import WrapClick from "./WrapClick"
 //import testluggage from "../../../images/testbag1.png"
-const ServicesGrid = () => {
+const ServicesGrid = props => {
+  const [openOverlay, setopenOverlay] = useState(false)
+  const [currentOverlay, setcurrentOverlay] = useState("element")
+  const [currentOverlayimage, setcurrentOverlayimage] = useState(testshoe)
+  const handler = data => {
+    setopenOverlay(data)
+  }
+  const handleroverlay = data1 => {
+    setcurrentOverlay(data1)
+    setopenOverlay(!openOverlay)
+    console.log("Overlay")
+  }
+
   return (
     <div className="center-section textaligncenter">
       <h1>Services</h1>
 
       <div className="ServicesGRID">
         <div className="SubServicesGRID">
-          <div className="overtest">
-            <div className="exit">x</div>
-            <div className="relativetest">
-              <div className="flextestst">
-                <div className="Photo">
-                  <img src={bags} />
-                </div>
-                <div className="textx">
-                  <div className="DescriptionT">
-                    <h1>Bags, Luggage and more </h1>
-                    <p>
-                      We use only top quality materials to repair all shoes. Our
-                      expert cobblers' repair work will provide you with very
-                      comfortable, better-than-new condition shoes and boots.{" "}
-                    </p>
-                  </div>
+          {/* DISPLAY NONE */}
 
-                  <div className="checkDo">
-                    <div className="firstrow">
-                      <div className="checkItem">
-                        <div className="iconCheck">
-                          <img src={check} />
-                        </div>
-                        Retractable Handles
-                      </div>
-                      <div className="checkItem">
-                        <div className="iconCheck">
-                          <img src={check} />
-                        </div>
-                        Wheel replacement
-                      </div>
-                      <div className="checkItem">
-                        <div className="iconCheck">
-                          <img src={check} />
-                        </div>
-                        Carry Handles
-                      </div>
-                    </div>
-                    <div className="second">
-                      <div className="checkItem">
-                        <div className="iconCheck">
-                          <img src={check} />
-                        </div>
-                        Zipper repair/replacement
-                      </div>
-                      <div className="checkItem">
-                        <div className="iconCheck">
-                          <img src={check} />
-                        </div>
-                        Rips in any material
-                      </div>
+          {openOverlay && (
+            <Serviceitemoverlay
+              HandlerProp={handler}
+              state={openOverlay}
+              currentdata={currentOverlay}
+              style={{ display: "none" }}
+              imageoverlayprop={testshoe}
+            />
+          )}
 
-                      <div className="checkItem">
-                        <div className="iconCheck">
-                          <img src={check} />
-                        </div>
-                        Retractable Handles
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="photoss">
-                <div className="photoelement"></div>
-                <div className="photoelement"></div>
-                <div className="photoelement"></div>
-                <div className="photoelement"></div>
-              </div>
-            </div>
-          </div>
-          <div className="Services-Item testshoe">
-            <img src={testshoe} />
-          </div>
-          <div className="Services-Item">
-            <img src={testshoewoman} />
-          </div>
-          <div className="Services-Item testbag">
-            <img src={bags} />
-          </div>
-          <div className="Services-Item"></div>
-          <div className="Services-Item"></div>
-          <div className="Services-Item"></div>
+          {/* DISPLAY NONE */}
+          <WrapClick HandlerPropName={handleroverlay}>
+            <ServiceItem img={testshoe} name={"shoemen"}></ServiceItem>
+            <ServiceItem img={testshoewoman} name={"shoewoman"}></ServiceItem>
+            <ServiceItem img={bags} name={"bags"}></ServiceItem>
+            <ServiceItem img={testshoe} name={"shoemen"}></ServiceItem>
+            <ServiceItem img={testshoewoman} name={"shoemen"}></ServiceItem>
+            <ServiceItem img={bags}></ServiceItem>
+          </WrapClick>
+
+          <h1>{currentOverlay}</h1>
         </div>
       </div>
     </div>

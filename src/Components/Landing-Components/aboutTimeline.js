@@ -5,8 +5,8 @@ import landingFoto from "../../../static/images/test.jpg"
 
 const AboutTimeline = () => {
   return (
-    <div className="center-section  ">
-      <div className="LandingWelcome-Container  flexdirection-row">
+    <div className="center-section ladingwelcomecenter ">
+      <div className="LandingWelcome-Container  flexdirection-column">
         <div className="LandingWelcome-Text">
           It's time <br />
           to get your <br />

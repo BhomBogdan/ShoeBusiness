@@ -48,6 +48,10 @@ ul {
 }
 //F-Remove bullet, text-deco none ( GLOBAL )
 
+.flexdirection-column {
+  flex-direction: row;
+  display: flex;
+}
 //S-BUTTONS
 .button1 {
   margin: 50px 0px;
@@ -245,11 +249,23 @@ img {
     height: 20px;
   }
   //Landing page
+  .LandingWelcome-Text {
+    padding: 0px;
+  }
+  .ladingwelcomecenter {
+    margin-top: 0px 50px !important;
+  }
 
+  .LandingWelcome-Photo {
+    height: 600px;
+  }
   //Landing page
 
   .flexdirection-row {
     flex-direction: column;
+  }
+  .flexdirection-column {
+    flex-direction: row;
   }
   .LandingServices-Item {
     margin: 40px 25px;
@@ -274,9 +290,7 @@ img {
   .space-section {
     margin: 0px;
   }
-  .center-section {
-    margin-top: 50px !important;
-  }
+
   .T-AboutT-Photo {
     display: none;
   }
