@@ -11,7 +11,7 @@ public_folder: /images
    files:
     - name: general
        label: General
-       file: "src/util/site.json"
+       file: "src/datasite/site.json"
       fields:
         - label: meta
            name: meta
@@ -38,7 +38,7 @@ public_folder: /images
              - widget: image
                name: image
                label: image
-               default: '/assets/stackrole.png'
+               default: '/Assets/test.png'
              - widget: image
                name: iconimage
                label: favicon
