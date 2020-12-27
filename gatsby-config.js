@@ -5,17 +5,10 @@
  */
 
 //SEO
+const settings = require("./src/datasite/site.json")
 
 module.exports = {
-  siteMetadata: {
-    title: "Severus Snape",
-    titleTemplate: "%s · The Real Hero",
-    description:
-      "Hogwarts Potions master, Head of Slytherin house and former Death Eater.",
-    url: "https://www.doe.com", // No trailing slash allowed!
-    image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
-    twitterUsername: "@occlumency",
-  },
+  siteMetadata: settings.meta,
 
   plugins: [
     {
