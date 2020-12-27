@@ -24,9 +24,31 @@ const AboutStory = () => {
     if (!selectedControlattribute) {
       return null
     } else {
-      const indexposition = selectedControlattribute.slice(-1)
-      const circlePress = document.getElementById("controlButtons")
-      console.log(circlePress.getElementsByTagName("div")[2])
+      let indexposition = selectedControlattribute.slice(-1)
+      console.log("indexpos " + indexposition)
+
+      //FOR change color
+      var total = 0
+      if (indexposition === "1") {
+        total = 1
+        console.log("totoal " + total)
+      } else {
+        total = parseInt(indexposition) + parseInt(indexposition) - 1
+        console.log("totoal " + total)
+      }
+
+      for (var i = total; i >= 0; i--) {
+        console.log(i)
+        document.getElementById("controlButtons").childNodes[
+          i
+        ].style.backgroundColor = "#1c3ab6"
+      }
+      for (var i = total; i <= 6  ; i++) {
+        console.log(i)
+        document.getElementById("controlButtons").childNodes[
+          i
+        ].style.backgroundColor = "#f2f2f2"
+      }
       console.log("elem")
       let yearstoshow = document
         .getElementById("yearscontrol")
