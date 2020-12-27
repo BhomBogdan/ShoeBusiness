@@ -5,19 +5,17 @@
  */
 
 //SEO
-const siteMetadata = {
-  title: `Gus and co`,
-  description: `website about shoe repair`,
-  image: `/images/test.jpg`,
-  siteUrl: `https://thelocalhost.io`,
-  siteLanguage: `en-US`,
-  siteLocale: `en_us`,
-  twitterUsername: `@bhombogdan`,
-  authorName: `Draghia Bogdna`,
-}
 
 module.exports = {
-  siteMetadata: siteMetadata,
+  siteMetadata: {
+    title: "Severus Snape",
+    titleTemplate: "%s · The Real Hero",
+    description:
+      "Hogwarts Potions master, Head of Slytherin house and former Death Eater.",
+    url: "https://www.doe.com", // No trailing slash allowed!
+    image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@occlumency",
+  },
 
   plugins: [
     {
@@ -27,6 +25,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-json`,
+    "gatsby-plugin-netlify-cms",
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -1,14 +1,50 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import cobbler from "../../../static/images/Assets/cobbler.jpg"
 const AboutStory = () => {
+  const arrowpositionmarginheight = ["5", "95", "185", "275"]
+  const arrowpositionmarginlenght = ["-45", "45", "135", "225"]
+  const [yearst, setyearst] = useState("1")
+  const [arrowposition, setarrowposition] = useState("5")
+  const [elementwidthmobile, setelementwidthmobile] = useState([])
+  useEffect(() => {
+    if (document.getElementById("testwidth").offsetWidth > 450) {
+      setelementwidthmobile("notMobile")
+      setarrowposition("5")
+    } else {
+      setelementwidthmobile("Mobile")
+      setarrowposition("-45")
+    }
+  }, [])
+
   const handleclick = event => {
-    const selectedControl = event.target
-    console.log(selectedControl)
-    const parentDiv = event.target.parentNode.id
-    const elementslist = document.getElementById(parentDiv)
-    console.log(elementslist)
-    console.log(event.target.parentNode.id)
+    const selectedControlattribute = event.target.getAttribute("dayayear")
+
+    console.log("josselected")
+    if (!selectedControlattribute) {
+      return null
+    } else {
+      const indexposition = selectedControlattribute.slice(-1)
+      const circlePress = document.getElementById("controlButtons")
+      console.log(circlePress.getElementsByTagName("div")[2])
+      console.log("elem")
+      let yearstoshow = document
+        .getElementById("yearscontrol")
+        .getElementsByClassName("years-items")[indexposition - 1]
+
+      setyearst(indexposition)
+
+      const yeartest = indexposition - 1
+      if (elementwidthmobile === "notMobile") {
+        setarrowposition(arrowpositionmarginheight[yeartest])
+      } else {
+        setarrowposition(arrowpositionmarginlenght[yeartest])
+      }
+      console.log("yearstoshow")
+
+      console.log(arrowposition)
+      console.log(elementwidthmobile)
+    }
   }
   return (
     <div className="center-section teste paddingSpacebetwen ">
@@ -22,6 +58,9 @@ const AboutStory = () => {
           <div className="button1"> Contact </div>
         </div>
         <div className="AboutS-History">
+          <h1>
+            {arrowposition},{elementwidthmobile}
+          </h1>
           <div className="AboutS-Bg">
             <div className="JS-History">
               <div
@@ -29,22 +68,57 @@ const AboutStory = () => {
                 id="controlButtons"
                 onClick={handleclick}
               >
-                <div className="circle-H red show-Control"></div>
+                <div
+                  className="circle-H red show-Control"
+                  dayayear="datayear1"
+                ></div>
                 <div className="line-H red"></div>
-                <div className="circle-H red"></div>
+                <div className="circle-H red" dayayear="datayear2"></div>
                 <div className="line-H red"></div>
-                <div className="circle-H red"></div>
+                <div className="circle-H red" dayayear="datayear3"></div>
                 <div className="line-H red"></div>
-                <div className="circle-H red"></div>
+                <div className="circle-H red" dayayear="datayear4"></div>
               </div>
 
-              <div className="Show-History">
-                <div className="years">
-                  <div className="arrows"></div>
-                  <div className="years-items show-Years">1900</div>
-                  <div className="years-items">1920</div>
-                  <div className="years-items">1940</div>
-                  <div className="years-items">1960</div>
+              <div className="Show-History" id="testwidth">
+                <div className="years" id="yearscontrol">
+                  <div
+                    className="arrows"
+                    style={
+                      elementwidthmobile === "notMobile"
+                        ? { marginTop: +arrowposition }
+                        : { marginLeft: +arrowposition }
+                    }
+                  ></div>
+
+                  <div
+                    className={`years-items ${
+                      yearst === "1" ? "activeyear" : " "
+                    }`}
+                  >
+                    1900
+                  </div>
+                  <div
+                    className={
+                      yearst === "2" ? "years-items activeyear" : "years-items"
+                    }
+                  >
+                    1920
+                  </div>
+                  <div
+                    className={
+                      yearst === "3" ? "years-items activeyear" : "years-items"
+                    }
+                  >
+                    1940
+                  </div>
+                  <div
+                    className={
+                      yearst === "4" ? "years-items activeyear" : "years-items"
+                    }
+                  >
+                    1960
+                  </div>
                 </div>
 
                 <div className="text">

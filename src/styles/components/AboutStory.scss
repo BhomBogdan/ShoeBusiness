@@ -77,9 +77,9 @@
 }
 .Show-History {
   margin: 0px 20px;
-
-  display: flex;
   min-height: 320px;
+  display: flex;
+  max-height: 320px;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
@@ -102,7 +102,7 @@
 .arrows {
   height: 40px;
   width: 40px;
-
+  transition: all 200ms linear 0s;
   position: absolute;
   margin-left: -40px;
   margin-top: 10px;
@@ -110,7 +110,7 @@
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
 
-  border-right: 20px solid var(--accent);
+  border-right: 20px solid #162e8d;
 }
 .text {
   overflow: hidden;
@@ -120,13 +120,18 @@
   flex: 1.8 1;
 }
 .years-items {
-  opacity: 0.5;
+  opacity: 1;
   padding: 20px;
   font-size: 20px;
   display: block;
 }
 .show-Years {
   opacity: 1;
+}
+.activeyear {
+  background-color: #162e8d;
+  width: 100%;
+  transition: all 300ms linear 0s;
 }
 .red {
   background-color: #f2f2f2;
@@ -140,7 +145,9 @@
   background-color: #f1f1f1;
 }
 ///TEST IMAGE BACKGROUND
-
+.years123 {
+  height: 200px;
+}
 .testImage {
   opacity: 0.5;
   top: -20%;
