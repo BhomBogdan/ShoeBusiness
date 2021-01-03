@@ -3,9 +3,15 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+
+const contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+}
 
 //SEO
 const settings = require("./src/datasite/site.json")
@@ -39,10 +45,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
+      options: contentfulConfig,
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
