@@ -3,7 +3,10 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
-require("dotenv").config()
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 //SEO
 const settings = require("./src/datasite/site.json")
 
