@@ -39,50 +39,54 @@ const Serviceitemoverlay = props => {
     return null
   } else {
     return (
-      <div className="overtest">
-        <div className="exit" onClick={() => props.HandlerProp(false)}>
-          x
-        </div>
-        <div className="relativetest">
-          <div className="flextestst">
-            <div className="Photo">
-              <img src={props.imageoverlayprop} />
-            </div>
-            <div className="textx">
-              <div className="DescriptionT">
-                <h1>{AlldataCategory.content.tittle}</h1>
-                <p>{AlldataCategory.content.desc}</p>
-              </div>
-
-              <div className="checkDo">
-                <div className="firstrow">
-                  {AlldataCategory.content.services.first_column.map(result => (
-                    <Foreachservice
-                      id={result}
-                      textitem={result}
-                      check={check}
-                    />
-                  ))}
-                </div>
-                <div className="second">
-                  {AlldataCategory.content.services.second_column.map(
-                    result => (
-                      <Foreachservice
-                        id={result}
-                        textitem={result}
-                        check={check}
-                      />
-                    )
-                  )}
-                </div>
-              </div>
-            </div>
+      <div className="parentovertest">
+        <div className="overtest">
+          <div className="exit" onClick={() => props.HandlerProp(false)}>
+            x
           </div>
-          <div className="photoss">
-            <div className="photoelement"></div>
-            <div className="photoelement"></div>
-            <div className="photoelement"></div>
-            <div className="photoelement"></div>
+          <div className="relativetest">
+            <div className="flextestst">
+              <div className="Photo">
+                <img src={props.imageoverlayprop} />
+              </div>
+              <div className="textx">
+                <div className="DescriptionT">
+                  <h1>{AlldataCategory.content.tittle}</h1>
+                  <p>{AlldataCategory.content.desc}</p>
+                </div>
+
+                <div className="checkDo">
+                  <div className="firstrow">
+                    {AlldataCategory.content.services.first_column.map(
+                      result => (
+                        <Foreachservice
+                          id={result}
+                          textitem={result}
+                          check={check}
+                        />
+                      )
+                    )}
+                  </div>
+                  <div className="second">
+                    {AlldataCategory.content.services.second_column.map(
+                      result => (
+                        <Foreachservice
+                          id={result}
+                          textitem={result}
+                          check={check}
+                        />
+                      )
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="photoss">
+              <div className="photoelement"></div>
+              <div className="photoelement"></div>
+              <div className="photoelement"></div>
+              <div className="photoelement"></div>
+            </div>
           </div>
         </div>
       </div>

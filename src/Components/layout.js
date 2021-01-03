@@ -7,7 +7,7 @@ import "../styles/app.scss"
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div className="layoutwrapper">
       <SEO />
       <Header />
       <main>{children}</main>

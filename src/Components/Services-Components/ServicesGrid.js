@@ -29,16 +29,6 @@ const ServicesGrid = props => {
         <div className="SubServicesGRID">
           {/* DISPLAY NONE */}
 
-          {openOverlay && (
-            <Serviceitemoverlay
-              HandlerProp={handler}
-              state={openOverlay}
-              currentdata={currentOverlay}
-              style={{ display: "none" }}
-              imageoverlayprop={testshoe}
-            />
-          )}
-
           {/* DISPLAY NONE */}
           <WrapClick HandlerPropName={handleroverlay}>
             <ServiceItem img={testshoe} name={"shoemen"}></ServiceItem>
@@ -48,10 +38,17 @@ const ServicesGrid = props => {
             <ServiceItem img={testshoewoman} name={"shoemen"}></ServiceItem>
             <ServiceItem img={bags}></ServiceItem>
           </WrapClick>
-
-          <h1>{currentOverlay}</h1>
         </div>
       </div>
+      {openOverlay && (
+        <Serviceitemoverlay
+          HandlerProp={handler}
+          state={openOverlay}
+          currentdata={currentOverlay}
+          style={{ display: "none" }}
+          imageoverlayprop={testshoe}
+        />
+      )}
     </div>
   )
 }

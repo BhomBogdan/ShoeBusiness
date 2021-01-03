@@ -18,7 +18,7 @@
   display: none;
 }
 .AboutReview-Buttons {
-  margin: 40px 0px;
+  margin: 40px 10px;
   display: flex;
   text-align: center;
 
@@ -50,6 +50,7 @@
 }
 .buttonReview {
   border-radius: 10px;
+  margin: 10px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,4 +71,41 @@
 }
 .class {
   object-fit: contain;
+}
+@media (max-width: 768px) {
+  //ABOUT REVIEW
+  .CHANGE {
+    display: block;
+  }
+  .AboutReview-Buttons {
+    display: none;
+  }
+  .AboutReview-section {
+    margin: 0px;
+    flex-direction: column;
+  }
+  .AboutReview-imagetext {
+    flex-direction: column;
+  }
+  .subReviewText {
+    padding: 20px;
+    flex-direction: column;
+  }
+  .Quote {
+    margin: 15px;
+    height: inherit;
+    width: 30px;
+  }
+  //ABOUT REVIEW
+}
+//test
+.flextest1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media all and (max-width: 768px) {
+  .AboutReview-section {
+    max-width: 400px;
+  }
 }

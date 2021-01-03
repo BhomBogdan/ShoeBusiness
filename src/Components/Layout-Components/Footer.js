@@ -40,9 +40,9 @@ const Footer = () => {
           <p> © 2020 Gus and Co, All rights reserved </p>
           <div className="creditsText">
             By Bogdan Draghia
-            <Link to="https://bhombogdan.github.io/" target="_blank">
+            <a to="https://bhombogdan.github.io/" target="_blank">
               <img src={externalLinkIcon} />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

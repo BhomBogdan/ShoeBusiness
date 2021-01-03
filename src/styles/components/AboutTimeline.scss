@@ -8,7 +8,7 @@
   color: var(--TextWhite);
   flex: 1.5 1;
   padding: 20px 40px;
-  z-index: 2;
+  z-index: 1;
   font-size: var(--Font-B);
   font-weight: 600;
 }
@@ -39,7 +39,7 @@
 }
 .LandingWelcome-DivPhoto {
   position: absolute;
-  z-index: 1;
+
   flex: 1.5 1;
 }
 .LandingWelcome-Photo {

@@ -43,7 +43,7 @@ const AboutStory = () => {
           i
         ].style.backgroundColor = "#1c3ab6"
       }
-      for (var i = total; i <= 6  ; i++) {
+      for (var i = total; i <= 6; i++) {
         console.log(i)
         document.getElementById("controlButtons").childNodes[
           i
@@ -70,19 +70,11 @@ const AboutStory = () => {
   }
   return (
     <div className="center-section teste paddingSpacebetwen ">
+      <div className="tittlediv">
+        <h1>The years that we are proud</h1>
+      </div>
       <div className="AboutS space-section">
-        <div className="AboutS-Text">
-          <h1>Our Story</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <div className="button1"> Contact </div>
-        </div>
         <div className="AboutS-History">
-          <h1>
-            {arrowposition},{elementwidthmobile}
-          </h1>
           <div className="AboutS-Bg">
             <div className="JS-History">
               <div
@@ -153,9 +145,6 @@ const AboutStory = () => {
                       elit, sed eiusmod tempor incididunt ut labore et dolore
                       magna aliqua.
                     </p>
-                  </div>
-                  <div className="image-text">
-                    <img src={cobbler} />
                   </div>
                 </div>
               </div>

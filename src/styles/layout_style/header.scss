@@ -17,6 +17,8 @@ nav {
   height: 60px;
 }
 .Nav-Content > * > a {
+  display: block;
+  width: 100%;
   padding: 10px;
   border-radius: var(--BR1);
 }
@@ -69,4 +71,10 @@ header {
   background-color: var(--text-color);
   margin: 3px;
   display: block;
+}
+
+@media all and (max-width: 425px) {
+  .Nav-Content > * > a {
+    width: 90%;
+  }
 }
