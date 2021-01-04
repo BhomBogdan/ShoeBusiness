@@ -38,10 +38,7 @@ const Footer = () => {
       <div className="smallFotter">
         <div className="credits center-section-header-footer ">
           <p> © 2020 Gus and Co, All rights reserved </p>
-          <div className="creditsText">
-            By Bogdan Draghia
-            <a to="https://bhombogdan.github.io/" target="_blank">
-              <img src={externalLinkIcon} />
+          
             </a>
           </div>
         </div>
