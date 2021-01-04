@@ -39,7 +39,7 @@ const Footer = () => {
         <div className="credits center-section-header-footer ">
           <p> © 2020 Gus and Co, All rights reserved </p>
           
-          </div>
+      
         </div>
       </div>
     </footer>
